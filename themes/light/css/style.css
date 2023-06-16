@@ -1,0 +1,12 @@
+.form-style{
+    width: 800px;
+}
+
+.categories-list .card:hover{
+    background-color: #b9f9f0;
+    transform: scale(1.17);
+    transition-duration: 0.7s;
+}
+.container{
+    height: 100vh !important; /* 100% of the viewport height */
+}
