@@ -8,7 +8,7 @@ core\Core::getInstance()->pageParams['title']='Зміна експонату';
 <form class="form-style w-50 h-100 mx-auto p-3 my-3" action="" method="post" enctype="multipart/form-data">
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Назва:</label>
+            <label class="col-form-label fw-bold">Назва:</label>
         </div>
         <div class="col-5">
             <input type="text"  class="form-control"  name="name" placeholder="Введіть назву" value="<?=$exponat["Name"]?>">
@@ -21,7 +21,7 @@ core\Core::getInstance()->pageParams['title']='Зміна експонату';
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Опис:</label>
+            <label class="col-form-label fw-bold">Опис:</label>
         </div>
         <div class="col-5">
             <input type="text"  class="form-control"  name="description" placeholder="Введіть опис" value="<?=$exponat["Description"]?>">
@@ -34,7 +34,7 @@ core\Core::getInstance()->pageParams['title']='Зміна експонату';
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Ціна:</label>
+            <label class="col-form-label fw-bold">Ціна:</label>
         </div>
         <div class="col-5">
             <input type="text"  class="form-control"  name="price" placeholder="Введіть опис" value="<?=$exponat["Price"]?>">
@@ -47,7 +47,7 @@ core\Core::getInstance()->pageParams['title']='Зміна експонату';
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Кількість:</label>
+            <label class="col-form-label fw-bold">Кількість:</label>
         </div>
         <div class="col-5">
             <input type="text"  class="form-control"  name="count" placeholder="Введіть опис" value="<?=$exponat["Count"]?>">
@@ -60,7 +60,7 @@ core\Core::getInstance()->pageParams['title']='Зміна експонату';
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">ID Виставочної зали:</label>
+            <label class="col-form-label fw-bold">ID Виставочної зали:</label>
         </div>
         <div class="col-5">
             <select name="id_viewplace">
@@ -77,7 +77,7 @@ core\Core::getInstance()->pageParams['title']='Зміна експонату';
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Зображення:</label>
+            <label class="col-form-label fw-bold">Зображення:</label>
         </div>
         <div class="col-5">
             <input type="file"  class="form-control" id="file" name="file" lang="uk" >

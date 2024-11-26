@@ -20,4 +20,14 @@ class MainController extends Controller
                 break;
         }
     }
+
+    public function operationBackup(){
+        Core::getInstance()->db->BackUp();
+        return $this->render();
+    }
+
+    public function operationRestore(){
+        Core::getInstance()->db->Restore();
+        return $this->render();
+    }
 }

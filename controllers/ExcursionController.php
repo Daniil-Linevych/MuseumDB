@@ -108,7 +108,8 @@ class ExcursionController extends Controller
     public function operationView($params){
         $id = intval($params[0]);
         $excursion = Excursion::getExcursionById($id);
-        Statistics::updateExcursionInfo($id);
+        if (User::isUserVisitor())
+            Statistics::updateExcursionInfo($id);
         if (empty(User::getCurrentExcursion()))
             User::startExcursion($excursion);
         $viewplaces = ViewPlace::getListViewPlacesByExcursion($excursion["id"]);

@@ -7,7 +7,7 @@ core\Core::getInstance()->pageParams['title']='Реєстрація'
 <form class="form-style w-50 h-100 mx-auto p-3 my-3" action="" method="post">
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Логін:</label>
+            <label class="col-form-label fw-bold">Логін:</label>
         </div>
         <div class="col-5">
             <input type="text"  class="form-control" value="<?=$input_values['login'] ?>" name="login" placeholder="Введіть логін">
@@ -20,7 +20,7 @@ core\Core::getInstance()->pageParams['title']='Реєстрація'
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label for="inputPassword6" class="col-form-label">Пароль:</label>
+            <label for="inputPassword6" class="col-form-label fw-bold">Пароль:</label>
         </div>
         <div class="col-5">
             <input type="password" id="inputPassword6" class="form-control" name="password" placeholder="Введіть пароль">
@@ -33,7 +33,7 @@ core\Core::getInstance()->pageParams['title']='Реєстрація'
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label for="inputPassword6" class="col-form-label">Повторіть пароль:</label>
+            <label for="inputPassword6" class="col-form-label fw-bold">Повторіть пароль:</label>
         </div>
         <div class="col-5">
             <input type="password" id="inputPassword6" class="form-control" name="repeat_password" placeholder="Повторіть пароль">
@@ -46,7 +46,7 @@ core\Core::getInstance()->pageParams['title']='Реєстрація'
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label for="inputPassword6" class="col-form-label">Ім'я</label>
+            <label for="inputPassword6" class="col-form-label fw-bold">Ім'я</label>
         </div>
         <div class="col-5">
             <input type="text" id="inputPassword6" class="form-control"  name="fName" placeholder="Введіть ім'я"">
@@ -59,7 +59,7 @@ core\Core::getInstance()->pageParams['title']='Реєстрація'
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label for="inputPassword6" class="col-form-label">Прізвище</label>
+            <label for="inputPassword6" class="col-form-label fw-bold">Прізвище</label>
         </div>
         <div class="col-5">
             <input type="text" id="inputPassword6" class="form-control" name="lName" placeholder="Введіть прізвище">
@@ -72,7 +72,7 @@ core\Core::getInstance()->pageParams['title']='Реєстрація'
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Телефон</label>
+            <label class="col-form-label fw-bold">Телефон</label>
         </div>
         <div class="col-5">
             <input type="text" class="form-control" value="<?=$input_values['phone'] ?>" name="phone" placeholder="Введіть номер телефону">

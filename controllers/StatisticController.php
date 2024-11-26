@@ -12,8 +12,11 @@ use models\Statistics;
 class StatisticController extends Controller
 {
 
-    public function operationIndex(){
-
+    public function operationIndex($params){
+        $cancel = $params[0];
+        if(!(empty($cancel))){
+            Statistics::unsetExcursionInfo();
+        }
         $bestworkers = self::getBestWorkers();
         $excursions = Statistics::getExcursionsInfo();
         $exponats = self::getViewPLaceInfo();

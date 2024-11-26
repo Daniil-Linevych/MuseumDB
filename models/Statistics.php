@@ -51,6 +51,10 @@ class Statistics
 
     }
 
+    public static function unsetExcursionInfo(){
+        Core::getInstance()->db->UPDATE("ExcursionInfo", ["CountEntries"=>0]);
+    }
+
     public static function getExcursionsInfo(){
         return Core::getInstance()->db->SELECT("Excursion", "*", null, ["CountEntries"], false, "ExcursionInfo", ["FirstTable"=>"id", "SecondTable"=>"id_excursion"]);
 

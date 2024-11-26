@@ -56,6 +56,10 @@ class User
         $user = self::getAuthenticateUser();
         return $user["Access"] == 1;
     }
+    public static function isUserVisitor(){
+        $user = self::getAuthenticateUser();
+        return $user["Access"] == 2;
+    }
 
     public static function startExcursion($excursion){
         $_SESSION["excursions"] = $excursion;

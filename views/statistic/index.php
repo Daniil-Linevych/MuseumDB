@@ -82,6 +82,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="/statistic/index/cancel" class="btn btn-primary">Скинути</a>
             </div>
         </div>
     </div>

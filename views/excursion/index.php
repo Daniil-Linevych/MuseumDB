@@ -24,10 +24,10 @@ use models\Excursion;
                             </p>
                     </div>
                     <div >
-                        <p>Гід :<input type="checkbox" <? if ($excursion["IsWithGuide"] == 1) echo "checked";?>  ></p></div>
+                        <p><b>Гід:</b> <input type="checkbox" <? if ($excursion["IsWithGuide"] == 1) echo "checked";?> onclick="return false" ></p></div>
                      <div >
 
-                    <p>Ціна: <?=$excursion["Price"]."грн"?></p>
+                    <p><b>Ціна:</b> <?=$excursion["Price"]."грн"?></p>
                      </div>
                     <div >
                         <?if(User::isAuthenticate()):?>

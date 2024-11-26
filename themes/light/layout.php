@@ -33,7 +33,7 @@ else
     <link href="themes\light\css\style.css" rel="stylesheet">
 
 </head>
-<body style="height: 100vh !important;" class="container-fluid p-0 min-vh-100">
+<body style="height: 100vh !important; background-color: #edd1b0!important;" class="container-fluid p-0 min-vh-100">
 <header class=" p-4 mb-3 bg-dark text-white-50">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/"
@@ -52,6 +52,8 @@ else
                 <? if (User::isAuthenticate() && User::isUserAdmin()):?>
                     <li><a href="/worker/index" class="nav-link px-2 text-light">Працівники</a></li>
                         <li><a href="/statistic/index" class="nav-link px-2 text-light">Статистики</a></li>
+                        <li><a href="/main/backup" class="nav-link px-2 text-light">Бекап</a></li>
+                        <li><a href="/main/restore" class="nav-link px-2 text-light">Відновлення</a></li>
                     <? endif; ?>
                 <li><a href="#" class="nav-link px-2  text-light">Зв'язатись з нами</a></li>
                 <li><a href="#" class="nav-link px-2 text-light">Про нас</a></li>

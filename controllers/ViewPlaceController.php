@@ -64,6 +64,12 @@ class ViewPlaceController extends Controller
         $viewplace = ViewPlace::getViewPlaceById($id_viewplace);
         $workers = Worker::getListWorkers();
         $worker_id = Worker::getWorkerById($viewplace["id_worker"]);
+        $excursion_id = 0;
+        foreach ($excursions as $excursion){
+            if($excursion["id"] == $viewplace["id_excursion"]){
+                $excursion_id = $excursion["id"];
+            }
+        }
         if(Core::getInstance()->typeRequest === 'POST'){
             $failures = [];
             if (empty(trim($_POST['name']))){
@@ -83,7 +89,7 @@ class ViewPlaceController extends Controller
                 return $this->redirect("/excursion/view/{$viewplace["id_excursion"]}");
             }
             else{
-                return $this->render(null,["failures"=>$failures,"excursions"=>$excursions, "viewplace"=>$viewplace,"workers"=>$workers, "worker_id"=>$worker_id]);
+                return $this->render(null,["failures"=>$failures,"excursions"=>$excursions, "viewplace"=>$viewplace,"workers"=>$workers, "worker_id"=>$worker_id, "excursion_id"=>$excursion_id]);
             }
 
         }
@@ -91,7 +97,8 @@ class ViewPlaceController extends Controller
             "excursions"=>$excursions,
             "viewplace"=>$viewplace,
             "workers"=>$workers,
-            "worker_id"=>$worker_id
+            "worker_id"=>$worker_id,
+            "excursion_id"=>$excursion_id
         ]);
     }
 

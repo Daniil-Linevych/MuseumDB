@@ -69,4 +69,5 @@ core\Core::getInstance()->pageParams['title'] = 'Наймання працівн
                 </div>
             </div>
             <input class="btn btn-primary mt-3 w-25" type="submit" value="Найняти">
+            <a href="/worker/index" class="btn btn-secondary mt-3 w-25 mx-2">Скасувати</a>
 </form>

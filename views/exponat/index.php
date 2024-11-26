@@ -15,7 +15,7 @@
         </div>
         <div class="col-6">
             <div class="mb-2"><b>Опис:</b> <?=$exponat["Description"]?></div>
-            <div class="mb-2"><b>Ціна:</b> <?=$exponat["Price"]?> грн</div>
+            <div class="mb-2"><b>Орієнтована вартість:</b> <?=$exponat["Price"]?> грн</div>
             <div class="mb-2"><b>Кількість:</b> <?=$exponat["Count"]?></div>
         </div>
 

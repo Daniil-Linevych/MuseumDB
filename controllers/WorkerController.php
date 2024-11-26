@@ -11,7 +11,8 @@ class WorkerController extends Controller
 {
     public function operationIndex(){
         $workers = Worker::getListWorkers();
-        return $this->render(null,["workers"=>$workers]);
+        $viewplaces = ViewPlace::getListViewPlaces();
+        return $this->render(null,["workers"=>$workers, "viewplaces"=>$viewplaces]);
     }
 
     public function operationAdd(){

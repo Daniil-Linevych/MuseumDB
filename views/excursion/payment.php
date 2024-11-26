@@ -8,8 +8,8 @@ core\Core::getInstance()->pageParams['title']='Оплата'
 <a class="btn btn-primary mb-2" href="/excursion/index">Повернутись</a>
 <form class="form-style w-50 h-100 mx-auto p-3 my-3" action="" method="post">
     <div class="row g-3 align-items-center mb-2">
-        <div class="col-2">
-            <label class="col-form-label">Ім'я:</label>
+        <div class="col-3">
+            <label class="col-form-label fw-bold">Ім'я:</label>
         </div>
         <div class="col-5">
             <input type="text"  class="form-control"  name="name" value="<?=$user["FirstName"]." ".$user["LastName"]?>">
@@ -21,8 +21,8 @@ core\Core::getInstance()->pageParams['title']='Оплата'
         </div>
     </div>
     <div class="row g-3 align-items-center mb-2">
-        <div class="col-2">
-            <label class="col-form-label">Номер картки:</label>
+        <div class="col-3">
+            <label class="col-form-label fw-bold">Номер картки:</label>
         </div>
         <div class="col-5">
             <input type="number"  class="form-control"  name="card" value="1111111111111111">
@@ -34,11 +34,11 @@ core\Core::getInstance()->pageParams['title']='Оплата'
         </div>
     </div>
     <div class="row g-3 align-items-center mb-2">
-        <div class="col-2">
-            <label for="inputPassword6" class="col-form-label">День закінчення терміну:</label>
+        <div class="col-3">
+            <label class="col-form-label fw-bold">День закінчення терміну:</label>
         </div>
         <div class="col-5">
-            <input type="text"  name="date" value="01/2024">
+            <input type="text" class="form-control"  name="date" value="01/2024">
         </div>
         <div class="col-auto">
     <span  class="form-text text-danger">
@@ -47,8 +47,8 @@ core\Core::getInstance()->pageParams['title']='Оплата'
         </div>
     </div>
     <div class="row g-3 align-items-center mb-2">
-        <div class="col-2">
-            <label for="inputPassword6" class="col-form-label">Код:</label>
+        <div class="col-3">
+            <label class="col-form-label fw-bold">Код:</label>
         </div>
         <div class="col-5">
             <input type="number"  class="form-control" name="code" value="111">

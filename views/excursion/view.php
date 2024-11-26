@@ -21,8 +21,8 @@ if (User::isUserAdmin()) :
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
     <?php foreach ($viewplaces as $viewplace): ?>
-    <div class="col">
-        <div class="card h-100 w-75">
+    <div class="col ">
+        <div class="card h-100 w-75 mx-2">
             <? $photoPath = "images/viewplace/".$viewplace["Photo"];
             if(is_file($photoPath)) :?>
                 <img src="/<?=$photoPath?>" class="card-img-top mw-50 mh-50" alt="...">
@@ -32,6 +32,8 @@ if (User::isUserAdmin()) :
             <div class="card-body">
                 <h5 class="card-title"><?=$viewplace["Name"]?></h5>
                 <p class="card-text"><?=$viewplace["Description"]?></p>
+            </div>
+            <div class="m-3">
                 <?php
                 if (User::isUserAdmin() || (User::isUserWorker() && $worker["id"] == $viewplace["id_worker"])) :
                     ?>

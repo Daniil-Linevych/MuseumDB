@@ -19,11 +19,14 @@ if(User::isUserWorker()){
 <?php
 if (User::isUserAdmin()) :
     ?>
-    <a href="/exponat/add/<?=$viewplace["id"]?>" class="btn btn-info mb-3">Створити</a>
+    <a href="/exponat/add/<?=$viewplace["id"]?>" class="btn btn-info mb-3">Додати</a>
 <?php endif; ?>
 <a href="/excursion/view/<?=$viewplace["id_excursion"]?>" class="btn btn-primary mb-3">Повернутись</a>
-
+<?if(empty($exponats)):?>
+    <h4 class="text-center">Експонатів поки немає :(</h4>
+<?else:?>
 <div class="row row-cols-1 row-cols-md-4 g-4">
+
     <?php foreach ($exponats as $exponat): ?>
     <div class="col">
         <div class="card h-100">
@@ -49,3 +52,4 @@ if (User::isUserAdmin()) :
     </div>
     <?php endforeach; ?>
 </div>
+<?php endif;?>

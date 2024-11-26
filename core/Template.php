@@ -6,6 +6,7 @@ class Template
 {
     protected $path;
     protected $params;
+
     public function __construct($path)
     {
         $this->path = $path;

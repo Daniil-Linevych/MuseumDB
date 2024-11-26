@@ -1,6 +1,7 @@
 <?php
 /** @var array $workers */
-$arrayOfNumbers = ["One","Two","Three","Four","Five", "Six"];
+/** @var array $viewplaces */
+$arrayOfNumbers = ["One","Two","Three","Four","Five", "Six", "Seven"];
 
 use models\User;
 use models\Excursion;
@@ -30,6 +31,21 @@ use models\Excursion;
                     <div >
                         <p>Номер телефону: <?=$worker["Phone"]?></p>
                     </div>
+                    <?php $arrayOfviewplaces = [];
+                    foreach($viewplaces as $viewplace)
+                    {if($worker["id"] == $viewplace["id_worker"] )
+                        $arrayOfViewplaces[] = $viewplace["Name"];
+                    }
+                    if (empty($arrayOfViewplaces)):
+                    ?>
+                    <div >
+                        <p>Не відповідає за жодну виставкову залу </p>
+                    </div>
+                    <?else:?>
+                    <div >
+                        <p>Виставкові зали за які відповідає: <?echo implode(", ",$arrayOfViewplaces)?></p>
+                    </div>
+                    <? $arrayOfViewplaces = array(); endif;?>
                     <div >
                         <?if(User::isUserAdmin()):?>
                             <a href="/worker/edit/<?=$worker["Login"]?>" class="btn btn-warning">Змінити</a>

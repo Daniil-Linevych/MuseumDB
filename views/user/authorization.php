@@ -10,7 +10,7 @@ core\Core::getInstance()->pageParams['title']='Авторизація'
     <?php endif; ?>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label class="col-form-label">Логін:</label>
+            <label class="col-form-label fw-bold">Логін:</label>
         </div>
         <div class="col-10">
             <input type="text"  class="form-control" name="login" placeholder="Введіть логін">
@@ -23,7 +23,7 @@ core\Core::getInstance()->pageParams['title']='Авторизація'
     </div>
     <div class="row g-3 align-items-center mb-2">
         <div class="col-2">
-            <label for="inputPassword6" class="col-form-label">Пароль:</label>
+            <label for="inputPassword6" class="col-form-label fw-bold">Пароль:</label>
         </div>
         <div class="col-10">
             <input type="password" id="inputPassword6" class="form-control" name="password" placeholder="Введіть пароль">
